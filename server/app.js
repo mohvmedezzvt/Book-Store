@@ -2,7 +2,7 @@ const express = require('express');
 const connectToDatabase = require('./config/db');
 const logger = require('./middlewares/logger');
 const { notFound, errorHandler } = require('./middlewares/errors');
-const path = require('path');
+// const path = require('path');
 const helmet = require('helmet');
 const cors = require('cors');
 require('dotenv').config();
@@ -15,7 +15,7 @@ const app = express();
 
 // Middleware for serving static files
 // eslint-disable-next-line no-undef
-app.use(express.static(path.join(__dirname, 'images')));
+// app.use(express.static(path.join(__dirname, 'images')));
 
 // Middleware for parsing JSON bodies
 app.use(express.json());
